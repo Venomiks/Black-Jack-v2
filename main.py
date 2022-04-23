@@ -15,6 +15,15 @@ class Cards:
     cards_in_hand = [random.choice(play), random.choice(play)]
 cards = Cards()
 
+class Opponent(Cards):
+
+    cards_in_hand_2 = [random.choice(cards.play), random.choice(cards.play)]
+    print(f'oponents cards: {cards_in_hand_2[0]} {cards_in_hand_2[1]}')
+
+    sum_of_cards_2 = sum(cards_in_hand_2)
+
+opponent = Opponent()
+
 
 deck = []
 
@@ -29,9 +38,19 @@ for i in cards.cards_in_hand:
 
 
 
+def cards_in_play():
+    # summing the cards value
+    sum_of_cards = sum(cards.cards_in_hand)
+    print(f'your cards: {deck[0]} {deck[1]}')
 
-# summing the cards value
-sum_of_cards = sum(cards.cards_in_hand)
-print(deck[0], deck[1])
+    # checking the sum of cards in hand, if it reaches over 21 then you lose
+    if opponent.sum_of_cards_2 < sum_of_cards:
+        print("you win")
+    elif sum_of_cards > 21:
+        print("you win")
+    else:
+        print("you lose")
 
-print(f'your sum of cards is: {sum_of_cards}')
+    print(f'sum of your cards is: {sum_of_cards}')
+
+cards_in_play()
