@@ -35,14 +35,14 @@ for i in cards.cards_in_hand:
         deck.append(random.choice(cards.tens))
     else:
         deck.append(i)
+hand = f'your cards: {deck[:]}'
 
 
+# summing the cards value
+sum_of_cards = sum(cards.cards_in_hand)
+print(hand)
 
 def cards_in_play():
-    # summing the cards value
-    sum_of_cards = sum(cards.cards_in_hand)
-    print(f'your cards: {deck[0]} {deck[1]}')
-
     # checking the sum of cards in hand, if it reaches over 21 then you lose
     if opponent.sum_of_cards_2 < sum_of_cards:
         print("you win")
@@ -50,7 +50,15 @@ def cards_in_play():
         print("you win")
     else:
         print("you lose")
-
     print(f'sum of your cards is: {sum_of_cards}')
+
+
+# cheking for player to pick more cards
+choice = input("Wanna pick more cards? yes/no")
+if choice == "yes":
+    deck.append(random.choice(cards.tens))
+else:
+    pass
+print(hand)
 
 cards_in_play()
