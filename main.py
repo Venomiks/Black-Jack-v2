@@ -38,7 +38,7 @@ for i in cards.cards_in_hand:
 print(f'your cards: {deck[:]}')
 
 # summing the cards value
-sum_of_cards = sum(deck[0:])
+sum_of_cards = sum(deck[:])
 print(f'sum of your cards: {sum_of_cards}')
 
 def cards_in_play():
@@ -57,7 +57,7 @@ choice = input("Wanna pick more cards? yes/no")
 # for j in choice:
 if choice == "yes":
     deck.append(random.choice(cards.play))
-    print(f'your cards: {deck[0:]}')
+    print(f'your cards: {deck[:]}')
     print(f'sum of your cards: {sum(deck)}')
 else:
     pass
