@@ -55,6 +55,7 @@ if choice == "yes":
     print(f'your opponents cards: {op_deck[:]}')
     print(f'sum of your cards: {sum(deck[:])}')
 
+# Win/Lose "screen"
 def cards_in_play():
     # checking the sum of cards in hand, if it reaches over 21 then you lose
     if sum(op_deck[:]) < sum(deck[:]):
