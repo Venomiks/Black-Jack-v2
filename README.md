@@ -1,2 +1,2 @@
 # Black-Jack-v2
-uczenie się OOP na starym projekcie
+trying to learn OOP on older project
