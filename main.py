@@ -23,7 +23,6 @@ while True:
     op_deck = []
 
 
-
     #iterating through cards and modifying deck
     for i in cards.cards_in_hand:
         if i == 11 or i == 1:
@@ -73,7 +72,3 @@ while True:
 
     if answer == 'no':
         break
-
-
-
-
